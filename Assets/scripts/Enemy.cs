@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player") //this will make sure the the collision was with player
         {
             Player player = other.transform.GetComponent<Player>();
             if (player != null)
