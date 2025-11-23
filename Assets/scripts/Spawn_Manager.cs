@@ -11,7 +11,8 @@ public class Spawn_Manager : MonoBehaviour
     [SerializeField]
     public bool stopSpawning = false;
     [SerializeField]
-    private GameObject triple_shot; //0 = tripple shot, 1= speed 2 = shield
+    private GameObject[] powerups; //array of powerups
+    //private GameObject triple_shot; //0 = tripple shot, 1= speed 2 = shield
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,10 @@ public class Spawn_Manager : MonoBehaviour
         while(stopSpawning==false)
         {
             Vector3 position = new Vector3(Random.Range(-9.3f, 9.3f), 7.69f, 0);
-            GameObject tripple_shot = Instantiate(triple_shot, position, Quaternion.identity);
+            int random = Random.Range(0, 2); //will choose a rabdom no from 0 and 1
+            //GameObject tripple_shot = Instantiate(gameObject, position, Quaternion.identity);  old one to only spawn tripple shot
+
+            Instantiate(powerups[random], position, Quaternion.identity); // new one with array to spawn one of the  powerups
             yield return new WaitForSeconds(10.0f);
         }
     }

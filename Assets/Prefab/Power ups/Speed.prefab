@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2912430953284817402}
   - component: {fileID: 7563519143002702365}
   - component: {fileID: 3050070449727404376}
+  - component: {fileID: 1827537737}
   m_Layer: 0
   m_Name: Speed
   m_TagString: Untagged
@@ -146,3 +147,22 @@ MonoBehaviour:
   speed: 3
   deathzone: -6
   power_up_id: 1
+--- !u!95 &1827537737
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972968220404092684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfe68551282cb804599fee32fd5111d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
