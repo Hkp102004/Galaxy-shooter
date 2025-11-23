@@ -50,11 +50,12 @@ public class power_up : MonoBehaviour
                 switch(power_up_id) //using switch so the code is more optimised and don't have more prioblem for developement
                 {
                     case 0: //if 0 it'll activate tripple shot
-                        player.ActivateTrippleshot();
+                        player.ActivateTrippleshot(); //will activate tripple shot
                         Debug.Log("The object that you just hit was tripple shot");
                         break;
                     case 1: 
                         Debug.Log("The object that you just hit now is speed");
+                        player.ActivateSpeed(); //will activate speed function from player script
                         break;
                     case 2:
                         Debug.Log("The thing that you just hit is the shield");

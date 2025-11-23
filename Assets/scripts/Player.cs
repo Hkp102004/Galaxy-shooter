@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed = 3.5f;
     [SerializeField]
+    private float multiplier = 2; //this to be multiplied to speed
+    [SerializeField]
     private GameObject laserprefab;
     [SerializeField]
     private float firerate = 0.1f;
@@ -21,7 +23,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Spawn_Manager spawnManager; //Spawn_Manager is the class name , check the script you'll  understand or use notes
     [SerializeField]
-    private bool trippleactive = false;
+    private bool trippleactive = false; //bool to deal with tripple shot activation
+    [SerializeField]
+    private bool speedactive = false; //bool to activate speed boost
     [SerializeField]
     private GameObject tripplelaser_prefab;
 
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0, -3, 0);
-        spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>();
+        spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>(); //linking spawn manager so I'll use the class name from Spawn_Manager script
     }
 
     // Update is called once per frame
@@ -63,7 +67,7 @@ public class Player : MonoBehaviour
         // to do this more optimistically, we follow this way
 
         Vector3 direction = new Vector3(horiInput, vertiInput, 0);
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime); //movement of the body
 
         //if the position of y >= 0
         //position of y should be 0 and x and z should be as it is
@@ -81,14 +85,14 @@ public class Player : MonoBehaviour
 
         //the math function for the y position thingy 
 
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -4.13f, 0), 0);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -4.13f, 0), 0); //to limit the movement of player in y direction
 
         //is the player position > 11.34f
         //player position = -11.34f
         //else if player position < -11.34f
         //player position = 11.34f
 
-        if (transform.position.x > 11.34f)
+        if (transform.position.x > 11.34f) //this to make a loop so the player always stays on the screen
         {
             transform.position = new Vector3(-11.34f, transform.position.y, 0);
         }
@@ -137,5 +141,19 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f); 
         trippleactive = false;
+    }
+
+    public void ActivateSpeed() //function to make the speed boost true
+    {
+        speedactive = true;
+        speed *= multiplier; //changing the speed
+        StartCoroutine(SpeedCooldown()); //cooldown
+    }
+
+    IEnumerator SpeedCooldown() //cooldown for speed
+    {
+        yield return new WaitForSeconds(5.0f); //will wait for 5 sec
+        speedactive = false;
+        speed /= multiplier;
     }
 }
