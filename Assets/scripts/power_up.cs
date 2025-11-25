@@ -59,6 +59,7 @@ public class power_up : MonoBehaviour
                         break;
                     case 2:
                         Debug.Log("The thing that you just hit is the shield");
+                        player.ActivateShield(); //will activate the shield from the player script and run that function
                         break;
                     default:
                         break;

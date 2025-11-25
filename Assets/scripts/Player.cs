@@ -127,7 +127,12 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
-        if(shieldactive==false)
+        if(shieldactive==true)
+        {
+            shieldactive = false;
+            return;
+        }
+        if(shieldactive == false)
         {
             lives -= 1;
         }
@@ -163,5 +168,17 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(5.0f); //will wait for 5 sec
         speedactive = false;
         speed /= multiplier;
+    }
+
+    public void ActivateShield()
+    {
+        shieldactive = true;
+        StartCoroutine(ShieldCooldown());
+    }
+
+    IEnumerator ShieldCooldown()
+    {
+        yield return new WaitForSeconds(8.0f);
+        shieldactive = false;
     }
 }
