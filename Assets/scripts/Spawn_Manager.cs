@@ -42,7 +42,7 @@ public class Spawn_Manager : MonoBehaviour
         while(stopSpawning==false)
         {
             Vector3 position = new Vector3(Random.Range(-9.3f, 9.3f), 7.69f, 0);
-            int random = Random.Range(0, 2); //will choose a rabdom no from 0 and 1
+            int random = Random.Range(0, 3); //will choose a rabdom no from 0 to 2 since it keeps it as [0,3)
             //GameObject tripple_shot = Instantiate(gameObject, position, Quaternion.identity);  old one to only spawn tripple shot
 
             Instantiate(powerups[random], position, Quaternion.identity); // new one with array to spawn one of the  powerups
