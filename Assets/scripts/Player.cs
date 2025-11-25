@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     {
         transform.position = new Vector3(0, -3, 0);
         spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>(); //linking spawn manager so I'll use the class name from Spawn_Manager script
+        shield_prefab.SetActive(false); // so the payer doesn't have a shield when he starts
     }
 
     // Update is called once per frame
@@ -130,6 +131,7 @@ public class Player : MonoBehaviour
         if(shieldactive==true)
         {
             shieldactive = false;
+            shield_prefab.SetActive(false);
             return;
         }
         if(shieldactive == false)
@@ -174,11 +176,13 @@ public class Player : MonoBehaviour
     {
         shieldactive = true;
         StartCoroutine(ShieldCooldown());
+        shield_prefab.SetActive(true);
     }
 
     IEnumerator ShieldCooldown()
     {
         yield return new WaitForSeconds(8.0f);
         shieldactive = false;
+        shield_prefab.SetActive(false);
     }
 }
