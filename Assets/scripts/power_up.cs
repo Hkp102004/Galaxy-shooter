@@ -30,7 +30,7 @@ public class power_up : MonoBehaviour
 
     public void move()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(Vector3.down * speed * Time.deltaTime); //function to make
     }
 
     public void destroy()
