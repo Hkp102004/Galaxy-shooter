@@ -9,7 +9,7 @@ public class laser : MonoBehaviour
     //speed variable
     [SerializeField]
     private float speed = 10f;
-    private float deathzone = 7.5f;
+    private float deathzone = 7.5f; //the point where the prefab should be deleted
     // Start is called before the first frame update
     void Start()
     {

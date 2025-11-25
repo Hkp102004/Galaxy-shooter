@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject laserprefab;
     [SerializeField]
-    private float firerate = 0.1f;
+    private float firerate = 0.1f; //for having a time limit on firing laser
     private float canfire = -1f;
     [SerializeField]
     private int lives = 3;
@@ -27,7 +27,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private bool speedactive = false; //bool to activate speed boost
     [SerializeField]
-    private GameObject tripplelaser_prefab;
+    private GameObject tripplelaser_prefab; //the prefab to tripple show that should instatiate instead of laser
+    [SerializeField]
+    private GameObject shield_prefab;  // the prefab of shield 
+
+    [SerializeField]
+    private bool shieldactive = false; //bool to turn on the shield
 
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
@@ -131,7 +136,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ActivateTrippleshot()
+    public void ActivateTrippleshot() 
     {
         trippleactive = true;
         StartCoroutine(Tripleshotcooldown());
@@ -155,5 +160,17 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(5.0f); //will wait for 5 sec
         speedactive = false;
         speed /= multiplier;
+    }
+
+    public void ActivateShield()
+    {
+        shieldactive = true; // to turn on shield
+        StartCoroutine(ShieldCooldown()); //starting the cooldown
+    }
+
+    IEnumerator ShieldCooldown() //countdown for shield
+    {
+        yield return new WaitForSeconds(5.0f); //cooldown for 5 sec
+        shieldactive = false;
     }
 }

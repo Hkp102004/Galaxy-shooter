@@ -11,7 +11,7 @@ public class power_up : MonoBehaviour
     private float deathzone = -6;
     // Start is called before the first frame update
     [SerializeField]
-    private int power_up_id;
+    private int power_up_id; //specific id for each power up so the different features can be trigered
     void Start()
     {
         
