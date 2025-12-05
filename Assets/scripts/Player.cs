@@ -193,4 +193,16 @@ public class Player : MonoBehaviour
     {
         score += n;
     }
+
+    public void subscore(int n)
+    {
+        if(score > 0)
+        {
+            score -= n;
+        }
+        else
+        {
+            Debug.Log("buddy the score is already 0, tf you doing?");
+        }
+    }
 }

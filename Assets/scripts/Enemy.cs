@@ -72,6 +72,7 @@ public class Enemy : MonoBehaviour
             Player player = other.transform.GetComponent<Player>();
             if (player != null)
             {
+                player.subscore(10);
                 player.Damage();
             }
 
