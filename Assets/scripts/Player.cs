@@ -188,4 +188,9 @@ public class Player : MonoBehaviour
         shieldactive = false;
         shield_prefab.SetActive(false);
     }
+
+    public void addscore()
+    {
+        score += 10;
+    }
 }

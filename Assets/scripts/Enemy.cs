@@ -57,8 +57,12 @@ public class Enemy : MonoBehaviour
             //{
             //    Destroy(laser.gameObject);
             //}
+
+            Player player = other.transform.GetComponent<Player>();
+
             Destroy(other.gameObject);
             Destroy(gameObject);
+            //player.addscore();
         }
 
         if(other.gameObject.tag == "Player") //this will make sure the the collision was with player
