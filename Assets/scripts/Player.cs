@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private bool shieldactive = false; //bool to turn on the shield
 
+    [SerializeField]
+    private int score;  //score variable to keep a track of score
+
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
 
