@@ -58,9 +58,11 @@ public class Enemy : MonoBehaviour
             //    Destroy(laser.gameObject);
             //}
 
-            Player player = other.transform.GetComponent<Player>();
+            //Player player = other.transform.GetComponent<Player>();
+            Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
             Destroy(other.gameObject);
+            player.addscore(10);
             Destroy(gameObject);
             //player.addscore();
         }
