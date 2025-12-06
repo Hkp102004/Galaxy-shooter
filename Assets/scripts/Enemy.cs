@@ -9,9 +9,11 @@ public class Enemy : MonoBehaviour
     private float speed = 4f;
     [SerializeField]
     private int deathzone = -6;
+
+    private Player player;
     void Start()
     {
-        
+        player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
     }
 
     // Update is called once per frame
@@ -58,18 +60,16 @@ public class Enemy : MonoBehaviour
             //    Destroy(laser.gameObject);
             //}
 
-            //Player player = other.transform.GetComponent<Player>();
-            Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            //Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
             Destroy(other.gameObject);
             player.addscore(10);
             Destroy(gameObject);
-            //player.addscore();
         }
 
         if(other.gameObject.tag == "Player") //this will make sure the the collision was with player
         {
-            Player player = other.transform.GetComponent<Player>();
+            //Player player = other.transform.GetComponent<Player>();
             if (player != null)
             {
                 player.subscore(10);

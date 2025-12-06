@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
 
+
     // Start is called before the first frame update
     void Start()
     {
