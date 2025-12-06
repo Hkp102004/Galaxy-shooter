@@ -22,7 +22,7 @@ public class UI_manager : MonoBehaviour
     }
 
 
-    private void  Score_Update(int score)
+    public void  Score_Update(int score)
     {
         score_txt.text = "Score: " + score;
     }
