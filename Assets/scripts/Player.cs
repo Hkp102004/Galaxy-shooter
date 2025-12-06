@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
 
+    private UI_manager UI;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,13 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0, -3, 0);
         spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>(); //linking spawn manager so I'll use the class name from Spawn_Manager script
         shield_prefab.SetActive(false); // so the payer doesn't have a shield when he starts
+
+        UI = GameObject.Find("Canvas").GetComponent<UI_manager>(); //connecting the ui manager script 
+
+        if(UI == null)
+        {
+            Debug.LogError("Ui manager is not connected");
+        }
     }
 
     // Update is called once per frame

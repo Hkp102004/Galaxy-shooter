@@ -60,8 +60,6 @@ public class Enemy : MonoBehaviour
             //    Destroy(laser.gameObject);
             //}
 
-            //Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-
             Destroy(other.gameObject);
             player.addscore(10);
             Destroy(gameObject);
