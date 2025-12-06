@@ -201,6 +201,7 @@ public class Player : MonoBehaviour
     public void addscore(int n)
     {
         score += n;
+        UI.Score_Update(score);
     }
 
     public void subscore(int n)
@@ -208,6 +209,7 @@ public class Player : MonoBehaviour
         if(score > 0)
         {
             score -= n;
+            UI.Score_Update(score);
         }
         else
         {
