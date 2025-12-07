@@ -15,6 +15,6 @@ public class GameManager : MonoBehaviour
 
     public void Gameover()
     {
-        
+        gameovr = true;
     }
 }
