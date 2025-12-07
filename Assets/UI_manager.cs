@@ -59,6 +59,7 @@ public class UI_manager : MonoBehaviour
         {
             StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
             restart_txt.gameObject.SetActive(true);
+            gm.Gameover();
         }
 
     }
