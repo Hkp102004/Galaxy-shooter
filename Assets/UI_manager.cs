@@ -7,7 +7,8 @@ public class UI_manager : MonoBehaviour
 {
     [SerializeField]
     private Text score_txt; //to keep the track of score to display
-    //private Player player;
+    [SerializeField]
+    private Sprite[] lives_img;
 
     void Start()
     {
