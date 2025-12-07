@@ -13,6 +13,8 @@ public class UI_manager : MonoBehaviour
     private Image sprite_image; //variable that will store the image to display
     [SerializeField]
     private Text gameovr_txt;
+    [SerializeField]
+    private Text restart_txt;
 
     void Start()
     {
