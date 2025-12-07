@@ -16,7 +16,7 @@ public class UI_manager : MonoBehaviour
     [SerializeField]
     private Text restart_txt;
 
-    GameManager gm;
+    private GameManager gm;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class UI_manager : MonoBehaviour
 
         if(gm == null)
         {
-            Debug.LogError("Game Manager not found");
+            Debug.LogError("Game Manager is NULL");
         }
     }
 
