@@ -32,5 +32,6 @@ public class UI_manager : MonoBehaviour
 
     public void update_life(int lives)
     {
+        sprite_image.sprite = lives_img[lives];
     }
 }
