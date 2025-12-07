@@ -55,6 +55,8 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("Ui manager is not connected");
         }
+
+        shieldactive = false; //setting this so the player doesn't get shield at start
     }
 
     // Update is called once per frame
