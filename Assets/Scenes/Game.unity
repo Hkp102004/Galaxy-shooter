@@ -160,6 +160,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d64f05547735cbe42abcd8ddc5cf4bde, type: 3}
   - {fileID: 21300000, guid: fd68b6ef22a578047952032114dc45e0, type: 3}
   sprite_image: {fileID: 937134386}
+  gameovr_txt: {fileID: 1803741335}
 --- !u!114 &700997693
 MonoBehaviour:
   m_ObjectHideFlags: 0
