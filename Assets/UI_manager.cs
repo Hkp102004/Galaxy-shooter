@@ -39,6 +39,6 @@ public class UI_manager : MonoBehaviour
 
     public void game_over()
     {
-        gameovr_txt.enabled = true;
+        gameovr_txt.gameObject.SetActive(true);
     }
 }
