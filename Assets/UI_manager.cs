@@ -37,10 +37,15 @@ public class UI_manager : MonoBehaviour
     {
         sprite_image.sprite = lives_img[lives];
 
-        if(lives == 0)
+        //if(lives == 0)
+        //{
+        //    gameovr_txt.gameObject.SetActive(true);
+        //    StartCoroutine(gameover_flickering());
+
+        //}
+        if(lives==0)
         {
-            gameovr_txt.gameObject.SetActive(true);
-            StartCoroutine(gameover_flickering());
+            StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
         }
     }
 
@@ -51,7 +56,12 @@ public class UI_manager : MonoBehaviour
 
     IEnumerator gameover_flickering()
     {
-        yield return new WaitForSeconds(1);
-        gameovr_txt.gameObject.SetActive(false);
+        while(true)
+        {
+            gameovr_txt.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            gameovr_txt.gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
