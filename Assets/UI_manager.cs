@@ -16,12 +16,21 @@ public class UI_manager : MonoBehaviour
     [SerializeField]
     private Text restart_txt;
 
+    GameManager gm;
+
     void Start()
     {
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); //making it conected to player script
         score_txt.text = "Score: " + 00;
         gameovr_txt.gameObject.SetActive(false);
         restart_txt.gameObject.SetActive(false);
+
+        gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
+        if(gm == null)
+        {
+            Debug.LogError("Game Manager not found");
+        }
     }
 
     // Update is called once per frame
