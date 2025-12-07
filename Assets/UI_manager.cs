@@ -18,6 +18,7 @@ public class UI_manager : MonoBehaviour
     {
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); //making it conected to player script
         score_txt.text = "Score: " + 00;
+        gameovr_txt.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,10 +36,15 @@ public class UI_manager : MonoBehaviour
     public void update_life(int lives) //function to display correct life 
     {
         sprite_image.sprite = lives_img[lives];
+
+        if(lives == 0)
+        {
+            gameovr_txt.gameObject.SetActive(true);
+        }
     }
 
-    public void game_over()
-    {
-        gameovr_txt.gameObject.SetActive(true);
-    }
+    //public void game_over()  to decreate complexity
+    //{
+    //    gameovr_txt.gameObject.SetActive(true);
+    //}
 }
