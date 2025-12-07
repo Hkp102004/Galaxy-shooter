@@ -57,11 +57,16 @@ public class UI_manager : MonoBehaviour
         //}
         if(lives==0)
         {
-            StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
-            restart_txt.gameObject.SetActive(true);
-            gm.Gameover();
+            gameover();
         }
 
+    }
+
+    public void gameover()
+    {
+        StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
+        restart_txt.gameObject.SetActive(true);
+        gm.Gameover();
     }
 
     //public void game_over()  to decreate complexity
