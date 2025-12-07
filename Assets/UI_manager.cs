@@ -40,6 +40,7 @@ public class UI_manager : MonoBehaviour
         if(lives == 0)
         {
             gameovr_txt.gameObject.SetActive(true);
+            StartCoroutine(gameover_flickering());
         }
     }
 
@@ -47,4 +48,10 @@ public class UI_manager : MonoBehaviour
     //{
     //    gameovr_txt.gameObject.SetActive(true);
     //}
+
+    IEnumerator gameover_flickering()
+    {
+        yield return new WaitForSeconds(1);
+        gameovr_txt.gameObject.SetActive(false);
+    }
 }
