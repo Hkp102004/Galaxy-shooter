@@ -149,6 +149,7 @@ public class Player : MonoBehaviour
         if(shieldactive == false)
         {
             lives -= 1;
+            UI.update_life(lives);
         }
 
         if(lives < 1)
