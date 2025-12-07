@@ -21,6 +21,7 @@ public class UI_manager : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>(); //making it conected to player script
         score_txt.text = "Score: " + 00;
         gameovr_txt.gameObject.SetActive(false);
+        restart_txt.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,7 +49,9 @@ public class UI_manager : MonoBehaviour
         if(lives==0)
         {
             StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
+            restart_txt.gameObject.SetActive(true);
         }
+
     }
 
     //public void game_over()  to decreate complexity
