@@ -9,6 +9,8 @@ public class UI_manager : MonoBehaviour
     private Text score_txt; //to keep the track of score to display
     [SerializeField]
     private Sprite[] lives_img;
+    [SerializeField]
+    private Image sprite_image;
 
     void Start()
     {
@@ -26,5 +28,9 @@ public class UI_manager : MonoBehaviour
     public void  Score_Update(int score)
     {
         score_txt.text = "Score: " + score;
+    }
+
+    public void update_life(int lives)
+    {
     }
 }

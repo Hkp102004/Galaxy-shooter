@@ -154,6 +154,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score_txt: {fileID: 1067202257}
+  lives_img:
+  - {fileID: 21300000, guid: d8e9a984c0217fc4485903cee740b9c5, type: 3}
+  - {fileID: 21300000, guid: 87c4c27265300424bb3ea8c186f6bb2b, type: 3}
+  - {fileID: 21300000, guid: d64f05547735cbe42abcd8ddc5cf4bde, type: 3}
+  - {fileID: 21300000, guid: fd68b6ef22a578047952032114dc45e0, type: 3}
+  sprite_image: {fileID: 937134386}
 --- !u!114 &700997693
 MonoBehaviour:
   m_ObjectHideFlags: 0
