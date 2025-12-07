@@ -36,4 +36,9 @@ public class UI_manager : MonoBehaviour
     {
         sprite_image.sprite = lives_img[lives];
     }
+
+    public void game_over()
+    {
+        gameovr_txt.enabled = true;
+    }
 }
