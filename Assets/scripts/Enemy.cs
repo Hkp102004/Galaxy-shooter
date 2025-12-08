@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             player.addscore(10);
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
-            speed = 0;
+            speed = 0.5f;
             Destroy(gameObject,2.3f);
         }
 
@@ -86,7 +86,7 @@ public class Enemy : MonoBehaviour
                 player.Damage();
             }
             blast.SetTrigger("explosion trigger");
-            speed = 0;
+            speed = 0.5f;
             Destroy(this.gameObject,2.3f);
         }
     }
