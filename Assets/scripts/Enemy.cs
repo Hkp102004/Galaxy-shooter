@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
 
-        blast = GetComponent<Animator>(); //gettting the animator component
+        blast = gameObject.GetComponent<Animator>(); //finding the animator as the game starts
 
         if (blast == null)
         {
@@ -72,9 +72,9 @@ public class Enemy : MonoBehaviour
 
             Destroy(other.gameObject);
             player.addscore(10);
-            //blast.ResetTrigger("explosion trigger"); //idk what am I doing atp
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
-            Destroy(gameObject);
+            speed = 0;
+            Destroy(gameObject,0.6f);
         }
 
         if(other.gameObject.tag == "Player") //this will make sure the the collision was with player
@@ -85,7 +85,8 @@ public class Enemy : MonoBehaviour
                 player.subscore(10);
                 player.Damage();
             }
-
+            blast.SetTrigger("explosion trigger");
+            speed = 0;
             Destroy(this.gameObject);
         }
     }
