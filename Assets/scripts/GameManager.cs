@@ -20,4 +20,9 @@ public class GameManager : MonoBehaviour
     {
         gameovr = true;
     }
+
+    public void main_menu()
+    {
+        SceneManager.LoadScene(0); //main menu scene
+    }
 }
