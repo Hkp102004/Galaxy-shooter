@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     {
         if ((gameovr == true) && (Input.GetKeyDown(KeyCode.R)))
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(1); //game scene
         }
     }
 
