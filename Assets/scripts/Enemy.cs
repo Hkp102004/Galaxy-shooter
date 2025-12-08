@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
             player.addscore(10);
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
             speed = 0;
-            Destroy(gameObject,0.6f);
+            Destroy(gameObject,2.4f);
         }
 
         if(other.gameObject.tag == "Player") //this will make sure the the collision was with player
@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
             }
             blast.SetTrigger("explosion trigger");
             speed = 0;
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,2.4f);
         }
     }
 }
