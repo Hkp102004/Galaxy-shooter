@@ -11,9 +11,19 @@ public class Enemy : MonoBehaviour
     private int deathzone = -6;
 
     private Player player;
+    [SerializeField]
+    Animator blast;  //animation of enemy distruction
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
+
+        blast = gameObject.GetComponent<Animator>(); //gettting the animator component
+
+        if (blast == null)
+        {
+            Debug.LogError("Animation is not here buddy, find it");
+        }
+
     }
 
     // Update is called once per frame
