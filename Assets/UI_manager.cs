@@ -15,6 +15,8 @@ public class UI_manager : MonoBehaviour
     private Text gameovr_txt;
     [SerializeField]
     private Text restart_txt;
+    [SerializeField]
+    private Button main_menu;
 
     private GameManager gm;
 
@@ -24,6 +26,7 @@ public class UI_manager : MonoBehaviour
         score_txt.text = "Score: " + 00;
         gameovr_txt.gameObject.SetActive(false);
         restart_txt.gameObject.SetActive(false);
+        main_menu.gameObject.SetActive(false); //set the button to inactive till the player dies
 
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
@@ -66,6 +69,7 @@ public class UI_manager : MonoBehaviour
     {
         StartCoroutine(gameover_flickering()); //couroutine to flicker the game over screen
         restart_txt.gameObject.SetActive(true);
+        main_menu.gameObject.SetActive(true);
         gm.Gameover();
     }
 

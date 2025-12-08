@@ -162,6 +162,7 @@ MonoBehaviour:
   sprite_image: {fileID: 937134386}
   gameovr_txt: {fileID: 1803741335}
   restart_txt: {fileID: 1796850348}
+  main_menu: {fileID: 1691389501}
 --- !u!114 &700997693
 MonoBehaviour:
   m_ObjectHideFlags: 0
