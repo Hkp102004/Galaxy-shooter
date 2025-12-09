@@ -6,16 +6,17 @@ using UnityEngine;
 public class Asteroid_behaviour : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 30f; // speed variable to help in rotation
-    // Start is called before the first frame update
+    private float speed = 10f; // speed variable to help in rotation
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(transform.position.x, transform.position.y, 60) * speed * Time.deltaTime);
+        Vector3 rotation_direction = new Vector3(transform.position.x, transform.position.y, -speed); //to show which direction the game obj will rotate
+
+        transform.Rotate(rotation_direction * Time.deltaTime); //rotation logic
     }
 }
