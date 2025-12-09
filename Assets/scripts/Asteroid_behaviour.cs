@@ -10,9 +10,11 @@ public class Asteroid_behaviour : MonoBehaviour
     [SerializeField]
     private GameObject explosion;
 
+    Player player;
+
     void Start()
     {
-        
+        player = GameObject.Find("player").GetComponent<Player>();
     }
 
     void Update()
@@ -38,13 +40,17 @@ public class Asteroid_behaviour : MonoBehaviour
         if(other.gameObject.tag == "Laser")
         {
             Destroy(other.gameObject);
-            GameObject explosion_anim = Instantiate(explosion, transform.position, Quaternion.identity);
+            GameObject explosion_anim = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast in a gameobj so can destroy it later
             Destroy(explosion_anim, 2f);
             Destroy(gameObject);
         }
         if(other.gameObject.tag == "Player")
         {
-
+            Destroy(other.gameObject);
+            GameObject explosion_anim2 = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast animation
+            Destroy(explosion_anim2, 2f);
+            Destroy(gameObject);
         }
     }
+
 }
