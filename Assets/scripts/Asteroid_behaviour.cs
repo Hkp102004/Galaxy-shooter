@@ -15,6 +15,11 @@ public class Asteroid_behaviour : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();
+
+        if(player == null)
+        {
+            Debug.LogError("player not foound in Asteroid_destroyer");
+        }
     }
 
     void Update()
@@ -46,7 +51,7 @@ public class Asteroid_behaviour : MonoBehaviour
         }
         if(other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
+            player.Damage();
             GameObject explosion_anim2 = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast animation
             Destroy(explosion_anim2, 2f);
             Destroy(gameObject);
