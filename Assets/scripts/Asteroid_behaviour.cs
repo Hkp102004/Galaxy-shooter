@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Asteroid_behaviour : MonoBehaviour
 {
+    [SerializeField]
+    private float speed = 3f; // speed variable to help in rotation
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,6 @@ public class Asteroid_behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up * speed * Time.deltaTime);
     }
 }
