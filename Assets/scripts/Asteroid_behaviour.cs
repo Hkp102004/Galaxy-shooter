@@ -38,8 +38,8 @@ public class Asteroid_behaviour : MonoBehaviour
         if(other.gameObject.tag == "Laser")
         {
             Destroy(other.gameObject);
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(explosion.gameObject, 2f);
+            GameObject explosion_anim = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(explosion_anim, 2f);
             Destroy(gameObject);
         }
         if(other.gameObject.tag == "Player")
