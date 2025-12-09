@@ -32,4 +32,19 @@ public class Asteroid_behaviour : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * -speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Laser")
+        {
+            Destroy(other.gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 2f);
+            Destroy(gameObject);
+        }
+        if(other.gameObject.tag == "Player")
+        {
+
+        }
+    }
 }
