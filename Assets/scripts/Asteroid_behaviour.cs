@@ -7,6 +7,8 @@ public class Asteroid_behaviour : MonoBehaviour
 {
     [SerializeField]
     private float speed = 15f; // speed variable to help in rotation
+    [SerializeField]
+    private GameObject explosion;
 
     void Start()
     {
