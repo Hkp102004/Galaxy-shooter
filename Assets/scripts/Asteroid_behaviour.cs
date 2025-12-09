@@ -15,6 +15,11 @@ public class Asteroid_behaviour : MonoBehaviour
 
     void Update()
     {
+        rotate();
+    }
+
+    public void rotate()
+    {
         Vector3 rotation_direction = new Vector3(transform.position.x, transform.position.y, -speed); //to show which direction the game obj will rotate
 
         transform.Rotate(rotation_direction * Time.deltaTime); //rotation logic
