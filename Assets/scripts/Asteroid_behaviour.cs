@@ -17,6 +17,13 @@ public class Asteroid_behaviour : MonoBehaviour
     {
         player = GameObject.Find("player").GetComponent<Player>();
 
+        spawn_manager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>();
+
+        if(spawn_manager == null)
+        {
+            Debug.LogError("Spawn_manager is missing in Asteroid_behaviour");
+        }
+
         if(player == null)
         {
             Debug.LogError("player not foound in Asteroid_destroyer");
