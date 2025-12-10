@@ -158,6 +158,7 @@ public class Player : MonoBehaviour
         if(shieldactive == false)
         {
             lives -= 1;
+            engine_fail();
             UI.update_life(lives);
         }
 
