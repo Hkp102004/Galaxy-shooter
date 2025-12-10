@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     private Player player;
     [SerializeField]
     Animator blast;  //animation of enemy distruction
+    [SerializeField]
+    private GameObject thruster_enemy;
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
@@ -74,6 +76,7 @@ public class Enemy : MonoBehaviour
             player.addscore(10);
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
             speed = 0.2f;
+            Destroy(thruster_enemy);
             Destroy(gameObject,2.3f);
         }
 
@@ -87,6 +90,7 @@ public class Enemy : MonoBehaviour
             }
             blast.SetTrigger("explosion trigger");
             speed = 0.5f;
+            Destroy(thruster_enemy);
             Destroy(this.gameObject,2f);
         }
     }

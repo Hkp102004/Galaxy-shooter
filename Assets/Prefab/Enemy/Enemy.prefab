@@ -50,6 +50,7 @@ MonoBehaviour:
   speed: 4
   deathzone: -6
   blast: {fileID: 0}
+  thruster_enemy: {fileID: 3890093314540199583}
 --- !u!212 &1428548560281842800
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ GameObject:
   - component: {fileID: 8465204979587935125}
   - component: {fileID: 6414391694076443739}
   m_Layer: 0
-  m_Name: Thruster_00000
+  m_Name: Thruster enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
