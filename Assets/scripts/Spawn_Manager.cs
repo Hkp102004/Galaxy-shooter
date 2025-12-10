@@ -16,7 +16,7 @@ public class Spawn_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        start_spawn();
+        //start_spawn();
     }
 
     public void start_spawn()
@@ -33,6 +33,7 @@ public class Spawn_Manager : MonoBehaviour
 
      public IEnumerator SpawnEnemyRoutine()
     {
+        yield return new WaitForSeconds(2f); //will wait for 2s before spawning everything
         while (stopSpawning==false) 
         {
             Vector3 position = new Vector3(Random.Range(-9.3f, 9.3f), 7, 0);
@@ -44,6 +45,7 @@ public class Spawn_Manager : MonoBehaviour
 
     public IEnumerator SpawnTrippleshotRoutine()
     {
+        yield return new WaitForSeconds(3f); //will wait 3 sec before spwning powerups
         while(stopSpawning==false)
         {
             Vector3 position = new Vector3(Random.Range(-9.3f, 9.3f), 7.69f, 0);
