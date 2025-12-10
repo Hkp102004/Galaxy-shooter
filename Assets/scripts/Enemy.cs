@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     Animator blast;  //animation of enemy distruction
 
     [SerializeField]
-
+    private GameObject thruster;
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again

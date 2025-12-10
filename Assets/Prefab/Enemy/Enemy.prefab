@@ -50,6 +50,7 @@ MonoBehaviour:
   speed: 4
   deathzone: -6
   blast: {fileID: 0}
+  thruster: {fileID: 116137107456792612, guid: ad419cec7e6491747a298245b6201682, type: 3}
 --- !u!212 &1428548560281842800
 SpriteRenderer:
   m_ObjectHideFlags: 0
