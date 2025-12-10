@@ -227,4 +227,21 @@ public class Player : MonoBehaviour
             Debug.Log("buddy the score is already 0, tf you doing?");
         }
     }
+
+    public void engine_fail()
+    {
+        if(lives==2)
+        {
+            right_engine.gameObject.SetActive(true);
+        }
+        else if(lives==1)
+        {
+            left_engine.gameObject.SetActive(true);
+        }
+        else if(lives==3)
+        {
+            left_engine.gameObject.SetActive(false);
+            right_engine.gameObject.SetActive(false);
+        }
+    }
 }
