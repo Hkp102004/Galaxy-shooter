@@ -1535,6 +1535,8 @@ MonoBehaviour:
   shield_prefab: {fileID: 1514348832}
   shieldactive: 1
   score: 0
+  left_engine: {fileID: 60947869}
+  right_engine: {fileID: 1182685203}
 --- !u!212 &1990370767
 SpriteRenderer:
   m_ObjectHideFlags: 0

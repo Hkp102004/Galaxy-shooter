@@ -37,12 +37,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     public int score;  //score variable to keep a track of score
 
+    [SerializeField]
+    private GameObject left_engine;  //engine gameobjects
+    [SerializeField]
+    private GameObject right_engine;
+
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
 
     private UI_manager UI;
 
-    // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector3(0, -3, 0);
