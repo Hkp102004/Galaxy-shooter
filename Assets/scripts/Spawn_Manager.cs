@@ -16,7 +16,7 @@ public class Spawn_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //start_spawn();
+        //start_spawn()  startting the spawning from Astroid_behaviour script when it is destroyed
     }
 
     public void start_spawn()
