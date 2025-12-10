@@ -47,14 +47,14 @@ public class Asteroid_behaviour : MonoBehaviour
             Destroy(other.gameObject);
             GameObject explosion_anim = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast in a gameobj so can destroy it later
             Destroy(explosion_anim, 2f);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
         if(other.gameObject.tag == "Player")
         {
             player.Damage();
             GameObject explosion_anim2 = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast animation
             Destroy(explosion_anim2, 2f);
-            Destroy(gameObject);
+            Destroy(gameObject, 05f);
         }
     }
 
