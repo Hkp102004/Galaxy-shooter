@@ -30,8 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
-  m_Children:
-  - {fileID: 8465204979587935125}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,7 +49,6 @@ MonoBehaviour:
   speed: 4
   deathzone: -6
   blast: {fileID: 0}
-  thruster_enemy: {fileID: 3890093314540199583}
 --- !u!212 &1428548560281842800
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,84 +144,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &7452276027912967158
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 471030980749518285}
-    m_Modifications:
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.013333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.031903338
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.999491
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -3.6560001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180.00002
-      objectReference: {fileID: 0}
-    - target: {fileID: 5951417649822109033, guid: 508cbeef8646b2a41af463dbcabd1748,
-        type: 3}
-      propertyPath: m_Name
-      value: Thruster enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 508cbeef8646b2a41af463dbcabd1748, type: 3}
---- !u!1 &3890093314540199583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5951417649822109033, guid: 508cbeef8646b2a41af463dbcabd1748,
-    type: 3}
-  m_PrefabInstance: {fileID: 7452276027912967158}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8465204979587935125 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1302031242721343587, guid: 508cbeef8646b2a41af463dbcabd1748,
-    type: 3}
-  m_PrefabInstance: {fileID: 7452276027912967158}
-  m_PrefabAsset: {fileID: 0}
