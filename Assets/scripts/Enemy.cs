@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     private Player player;
     [SerializeField]
     Animator blast;  //animation of enemy distruction
+
+    [SerializeField]
+
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
