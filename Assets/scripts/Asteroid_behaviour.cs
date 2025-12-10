@@ -9,6 +9,7 @@ public class Asteroid_behaviour : MonoBehaviour
     private float speed = 15f; // speed variable to help in rotation
     [SerializeField]
     private GameObject explosion;
+    Spawn_Manager spawn_manager;
 
     Player player;
 
