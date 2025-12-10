@@ -61,6 +61,9 @@ public class Player : MonoBehaviour
         }
 
         shieldactive = false; //setting this so the player doesn't get shield at start
+
+        left_engine.gameObject.SetActive(false); //setting the engine damages off at the start
+        right_engine.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
