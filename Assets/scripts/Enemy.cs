@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour
             player.addscore(10);
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
             speed = 0.2f;
+            Destroy(thruster); // will destroy the truster before the enemy gameobj
             Destroy(gameObject,2.3f);
         }
 
@@ -90,6 +91,7 @@ public class Enemy : MonoBehaviour
             }
             blast.SetTrigger("explosion trigger");
             speed = 0.5f;
+            Destroy(thruster);   // will destroy the truster before the enemy gameobj
             Destroy(this.gameObject,2f);
         }
     }

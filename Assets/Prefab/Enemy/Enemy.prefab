@@ -50,7 +50,7 @@ MonoBehaviour:
   speed: 4
   deathzone: -6
   blast: {fileID: 0}
-  thruster: {fileID: 116137107456792612, guid: ad419cec7e6491747a298245b6201682, type: 3}
+  thruster: {fileID: 5196317349025343322}
 --- !u!212 &1428548560281842800
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -225,6 +225,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad419cec7e6491747a298245b6201682, type: 3}
+--- !u!1 &5196317349025343322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 116137107456792612, guid: ad419cec7e6491747a298245b6201682,
+    type: 3}
+  m_PrefabInstance: {fileID: 5296687313708842878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5196317349025343325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 116137107456792611, guid: ad419cec7e6491747a298245b6201682,
