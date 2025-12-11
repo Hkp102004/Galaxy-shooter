@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
             speed = 0.2f;
             Destroy(thruster); // will destroy the truster before the enemy gameobj
-            Destroy(gameObject,2.3f);
+            Destroy(gameObject,2f);
         }
 
         if(other.gameObject.tag == "Player") //this will make sure the the collision was with player

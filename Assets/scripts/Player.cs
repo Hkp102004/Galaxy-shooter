@@ -229,7 +229,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void engine_fail()
+    private void engine_fail()
     {
         if(lives==2)
         {
