@@ -138,12 +138,22 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.34f, transform.position.y, 0);
         }
-    }
 
 
-    public void Player_turn()
-    {
-
+        //if(horiInput>0)
+        //{
+        //    turning.ResetTrigger("reset");
+        //    turning.SetTrigger("turning_right");
+        //}
+        //else if(horiInput<0)
+        //{
+        //    turning.ResetTrigger("reset");
+        //    turning.SetTrigger("turning_left");
+        //}
+        //else
+        //{
+        //    turning.SetTrigger("reset");
+        //}
     }
 
     void firelaser()
