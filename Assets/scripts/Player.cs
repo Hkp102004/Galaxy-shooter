@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
         //    turning.ResetTrigger("turning_right");  
         //}
 
-        if (horiInput > 0.1f)
+        if (horiInput > 0.1f)   //this section is still WIP DO NOT TOUCH
         {
             turning.ResetTrigger("turning_left");
             turning.SetTrigger("turning_right");
