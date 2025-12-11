@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class Player : MonoBehaviour
     private GameObject tripplelaser_prefab; //the prefab to tripple show that should instatiate instead of laser
     [SerializeField]
     private GameObject shield_prefab;  // the prefab of shield 
+    [SerializeField]
+    private GameObject left_engine;  //engine gameobjects
+    [SerializeField]
+    private GameObject right_engine;
 
     [SerializeField]
     private bool shieldactive = false; //bool to turn on the shield
@@ -38,9 +43,8 @@ public class Player : MonoBehaviour
     public int score;  //score variable to keep a track of score
 
     [SerializeField]
-    private GameObject left_engine;  //engine gameobjects
-    [SerializeField]
-    private GameObject right_engine;
+    private Animator turing; //animation to handle player turning 
+
 
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
@@ -127,6 +131,12 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.34f, transform.position.y, 0);
         }
+    }
+
+
+    public void Player_turn()
+    {
+
     }
 
     void firelaser()
