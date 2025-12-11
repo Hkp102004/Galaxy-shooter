@@ -140,20 +140,39 @@ public class Player : MonoBehaviour
         }
 
 
-        //if(horiInput>0)
+        //if (horiInput > 0)
         //{
-        //    turning.ResetTrigger("reset");
+        //    //turning.ResetTrigger("reset");
+        //    turning.ResetTrigger("turning_left");
         //    turning.SetTrigger("turning_right");
         //}
-        //else if(horiInput<0)
+        //else if (horiInput < 0)
         //{
-        //    turning.ResetTrigger("reset");
+        //    turning.ResetTrigger("turning_right");
         //    turning.SetTrigger("turning_left");
         //}
         //else
         //{
-        //    turning.SetTrigger("reset");
+        //    turning.ResetTrigger("turning_left");
+        //    turning.ResetTrigger("turning_right");  
         //}
+
+        if (horiInput > 0.1f)
+        {
+            turning.ResetTrigger("turning_left");
+            turning.SetTrigger("turning_right");
+        }
+        else if (horiInput < -0.1f)
+        {
+            turning.ResetTrigger("turning_right");
+            turning.SetTrigger("turning_left");
+        }
+        else
+        {
+            turning.ResetTrigger("turning_left");
+            turning.ResetTrigger("turning_right");
+        }
+
     }
 
     void firelaser()
