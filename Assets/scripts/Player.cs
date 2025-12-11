@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     public int score;  //score variable to keep a track of score
 
     [SerializeField]
-    private Animator turing; //animation to handle player turning 
+    private Animator turning; //animation to handle player turning 
 
 
     //to make an input file that is already mapped to the unity engine ans using that
@@ -68,6 +68,13 @@ public class Player : MonoBehaviour
 
         left_engine.gameObject.SetActive(false); //setting the engine damages off at the start
         right_engine.gameObject.SetActive(false);
+
+        turning = GetComponent<Animator>();
+
+        if(turning == null)
+        {
+            Debug.LogError("Animator not found in Player");
+        }
     }
 
     // Update is called once per frame
