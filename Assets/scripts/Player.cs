@@ -139,31 +139,15 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(11.34f, transform.position.y, 0);
         }
 
-
-        //if (horiInput > 0)
-        //{
-        //    //turning.ResetTrigger("reset");
-        //    turning.ResetTrigger("turning_left");
-        //    turning.SetTrigger("turning_right");
-        //}
-        //else if (horiInput < 0)
-        //{
-        //    turning.ResetTrigger("turning_right");
-        //    turning.SetTrigger("turning_left");
-        //}
-        //else
-        //{
-        //    turning.ResetTrigger("turning_left");
-        //    turning.ResetTrigger("turning_right");  
-        //}
-
-        if (horiInput > 0.1f)   //this section is still WIP DO NOT TOUCH
+        if (horiInput > 0.1f)   //animation player based on the direction player moves
         {
+            turning.ResetTrigger("reset");
             turning.ResetTrigger("turning_left");
             turning.SetTrigger("turning_right");
         }
         else if (horiInput < -0.1f)
         {
+            turning.ResetTrigger("reset");
             turning.ResetTrigger("turning_right");
             turning.SetTrigger("turning_left");
         }
@@ -171,6 +155,7 @@ public class Player : MonoBehaviour
         {
             turning.ResetTrigger("turning_left");
             turning.ResetTrigger("turning_right");
+            turning.SetTrigger("reset");
         }
 
     }
