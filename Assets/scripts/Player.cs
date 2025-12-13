@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
         //else if player position < -11.34f
         //player position = 11.34f
 
-        if (transform.position.x > 11.34f) //this to make a loop so the player always stays on the screen
+        if (transform.position.x > 11.34f) //this to make a loop so the player always stays on the screen along the y axis
         {
             transform.position = new Vector3(-11.34f, transform.position.y, 0);
         }
@@ -138,6 +138,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.34f, transform.position.y, 0);
         }
+
 
         if (horiInput > 0.1f)   //animation player based on the direction player moves
         {
