@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1409684055772472091
+--- !u!114 &-2042184730160480708
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25,7 +25,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 1
   toneCurveToeStrength:
     overrideState: 1
     value: 0
@@ -53,31 +53,31 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 0.2
+    value: 0
   tint:
     overrideState: 1
-    value: 3.1
+    value: 0
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: -6.78
+    value: 0
   saturation:
     overrideState: 1
-    value: 31
+    value: 50
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.99
+    value: 0.58
   contrast:
     overrideState: 1
-    value: 31
+    value: 18
   mixerRedOutRedIn:
     overrideState: 1
-    value: 86.5
+    value: 100
   mixerRedOutGreenIn:
     overrideState: 1
     value: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     value: 0
   mixerGreenOutRedIn:
     overrideState: 1
-    value: 0.33
+    value: 0
   mixerGreenOutGreenIn:
     overrideState: 1
     value: 100
@@ -95,13 +95,13 @@ MonoBehaviour:
     value: 0
   mixerBlueOutRedIn:
     overrideState: 1
-    value: 7.7
+    value: 0
   mixerBlueOutGreenIn:
     overrideState: 1
     value: 0
   mixerBlueOutBlueIn:
     overrideState: 1
-    value: 98.81
+    value: 100
   lift:
     overrideState: 1
     value: {x: 1, y: 1, z: 1, w: 0}
@@ -1329,13 +1329,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 44.09
+    value: 84.93
   threshold:
     overrideState: 1
-    value: 1
+    value: 14.8
   softKnee:
     overrideState: 1
-    value: 0.401
+    value: 0
   clamp:
     overrideState: 1
     value: 65472
@@ -1372,8 +1372,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -341578548038237890}
-  - {fileID: -1409684055772472091}
   - {fileID: 5686442653493912633}
+  - {fileID: -2042184730160480708}
 --- !u!114 &5686442653493912633
 MonoBehaviour:
   m_ObjectHideFlags: 3
