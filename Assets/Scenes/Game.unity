@@ -1934,6 +1934,7 @@ MonoBehaviour:
   shieldactive: 1
   score: 0
   turning: {fileID: 0}
+  laser_sound: {fileID: 1059879322}
 --- !u!212 &1990370767
 SpriteRenderer:
   m_ObjectHideFlags: 0

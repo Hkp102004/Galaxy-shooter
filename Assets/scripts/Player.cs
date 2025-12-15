@@ -44,6 +44,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Animator turning; //animation to handle player turning 
+    [SerializeField]
+    private AudioSource laser_sound;
 
 
     //to make an input file that is already mapped to the unity engine ans using that
