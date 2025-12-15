@@ -173,13 +173,13 @@ public class Player : MonoBehaviour
        
         if(trippleactive==true)
         {
-            Instantiate(tripplelaser_prefab, transform.position, Quaternion.identity);
             laser_sound.Play();
+            Instantiate(tripplelaser_prefab, transform.position, Quaternion.identity);
         }
         else
         {
-            Instantiate(laserprefab, transform.position + new Vector3(0, 0.9f, 0), Quaternion.identity);
             laser_sound.Play();
+            Instantiate(laserprefab, transform.position + new Vector3(0, 0.9f, 0), Quaternion.identity);
         }
     }
 
