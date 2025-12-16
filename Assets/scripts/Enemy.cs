@@ -89,6 +89,7 @@ public class Enemy : MonoBehaviour
             //    Destroy(laser.gameObject);
             //}
 
+            audio_source.Play();
             Destroy(other.gameObject);
             player.addscore(10);
             blast.SetTrigger("explosion trigger"); //maybe activating the trigger 
@@ -105,6 +106,7 @@ public class Enemy : MonoBehaviour
                 player.subscore(10);
                 player.Damage();
             }
+            audio_source.Play();
             blast.SetTrigger("explosion trigger");
             speed = 0.5f;
             Destroy(thruster);  
