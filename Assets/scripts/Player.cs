@@ -47,6 +47,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private AudioSource laser_sound; //laser sound that will play before laser is instantiated
 
+    //files for sound activation
+    [SerializeField]
+    private AudioSource power_upsrc;
+    [SerializeField]
+    private AudioClip power_upsound;
+
 
     //to make an input file that is already mapped to the unity engine ans using that
     //public float horizontalInput;
@@ -58,6 +64,7 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0, -3, 0);
         spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>(); //linking spawn manager so I'll use the class name from Spawn_Manager script
         shield_prefab.SetActive(false); // so the payer doesn't have a shield when he starts
+        power_upsrc = GetComponent<AudioSource>();
 
         UI = GameObject.Find("Canvas").GetComponent<UI_manager>(); //connecting the ui manager script 
 
@@ -76,6 +83,15 @@ public class Player : MonoBehaviour
         if(turning == null)
         {
             Debug.LogError("Animator not found in Player");
+        }
+
+        if (power_upsrc == null)
+        {
+            Debug.LogError("Audio source file for power_up is missing in player");
+        }
+        else
+        {
+            power_upsrc.clip = power_upsound;
         }
     }
 
