@@ -16,6 +16,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private GameObject thruster;
+
+    //this is the section for audios
+    [SerializeField]
+    private AudioClip explosion_sound; //blas sound clip
+    [SerializeField]
+    private AudioSource audio_source; //audio source 
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
