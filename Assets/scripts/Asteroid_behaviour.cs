@@ -68,6 +68,7 @@ public class Asteroid_behaviour : MonoBehaviour
         if(other.gameObject.tag == "Laser")
         {
             Destroy(other.gameObject);
+            explosion_source.Play();
             GameObject explosion_anim = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast in a gameobj so can destroy it later
             Destroy(explosion_anim, 2f);
             spawn_manager.start_spawn();
@@ -76,6 +77,7 @@ public class Asteroid_behaviour : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             player.Damage();
+            explosion_source.Play();
             GameObject explosion_anim2 = Instantiate(explosion, transform.position, Quaternion.identity); //spawning the blast animation
             Destroy(explosion_anim2, 2f);
             spawn_manager.start_spawn();
