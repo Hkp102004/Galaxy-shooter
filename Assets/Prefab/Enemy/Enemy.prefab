@@ -52,7 +52,7 @@ MonoBehaviour:
   deathzone: -6
   blast: {fileID: 0}
   thruster: {fileID: 5196317349025343322}
-  blast_sound: {fileID: 8300000, guid: b7cb14d8eeaf739488fb4fb5b59a4589, type: 3}
+  explosion_sound: {fileID: 8300000, guid: b7cb14d8eeaf739488fb4fb5b59a4589, type: 3}
   audio_source: {fileID: 0}
 --- !u!212 &1428548560281842800
 SpriteRenderer:

@@ -25,12 +25,22 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();  //connecting to player at start so don't have to implement again and again
+        audio_source = GetComponent<AudioSource>(); //this will get the audio source component in the start
 
         blast = gameObject.GetComponent<Animator>(); //finding the animator as the game starts
 
         if (blast == null)
         {
             Debug.LogError("Animation is not here buddy, find it");
+        }
+
+        if(audio_source == null)
+        {
+            Debug.LogError("The audio source is not connected to enemy");
+        }
+        else
+        {
+            audio_source.clip = explosion_sound;
         }
 
     }
