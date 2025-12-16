@@ -13,11 +13,17 @@ public class Asteroid_behaviour : MonoBehaviour
 
     Player player;
 
+    //explosion audio files
+    [SerializeField]
+    private AudioClip explosion_sound;
+    [SerializeField]
+    private AudioSource explosion_source;
+
     void Start()
     {
         player = GameObject.Find("player").GetComponent<Player>();
-
         spawn_manager = GameObject.Find("Spawn_Manager").GetComponent<Spawn_Manager>();
+        explosion_source = GetComponent<AudioSource>();
 
         if(spawn_manager == null)
         {
@@ -27,6 +33,15 @@ public class Asteroid_behaviour : MonoBehaviour
         if(player == null)
         {
             Debug.LogError("player not foound in Asteroid_destroyer");
+        }
+
+        if(explosion_source == null)
+        {
+            Debug.LogError("The audio source is missing for asteroid");
+        }
+        else
+        {
+            explosion_source.clip = explosion_sound;
         }
     }
 
