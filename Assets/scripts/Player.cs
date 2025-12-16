@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Animator turning; //animation to handle player turning 
     [SerializeField]
-    private AudioSource laser_sound;
+    private AudioSource laser_sound; //laser sound that will play before laser is instantiated
 
 
     //to make an input file that is already mapped to the unity engine ans using that
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
        
         if(trippleactive==true)
         {
-            laser_sound.Play();
+            laser_sound.Play(); //play laser sound
             Instantiate(tripplelaser_prefab, transform.position, Quaternion.identity);
         }
         else
