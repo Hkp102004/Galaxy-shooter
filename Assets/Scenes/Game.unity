@@ -2038,6 +2038,8 @@ MonoBehaviour:
   score: 0
   turning: {fileID: 0}
   laser_sound: {fileID: 1059879322}
+  power_upsrc: {fileID: 0}
+  power_upsound: {fileID: 8300000, guid: 153ae581ac3472142ad71afd915ff546, type: 3}
 --- !u!212 &1990370767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2183,7 +2185,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 153ae581ac3472142ad71afd915ff546, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

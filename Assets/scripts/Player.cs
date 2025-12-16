@@ -225,6 +225,7 @@ public class Player : MonoBehaviour
     public void ActivateTrippleshot() 
     {
         trippleactive = true;
+        power_upsrc.Play();
         StartCoroutine(Tripleshotcooldown());
     }
 
@@ -237,6 +238,7 @@ public class Player : MonoBehaviour
     public void ActivateSpeed() //function to make the speed boost true
     {
         speedactive = true;
+        power_upsrc.Play();
         speed *= multiplier; //changing the speed
         StartCoroutine(SpeedCooldown()); //cooldown
     }
@@ -251,6 +253,7 @@ public class Player : MonoBehaviour
     public void ActivateShield()
     {
         shieldactive = true;
+        power_upsrc.Play();
         StartCoroutine(ShieldCooldown());
         shield_prefab.SetActive(true);
     }
