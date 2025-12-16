@@ -15,9 +15,6 @@ public class Enemy : MonoBehaviour
     Animator blast;  //animation of enemy distruction
 
     [SerializeField]
-    private AudioSource explosion_sound; //the sound of explosion in game 
-
-    [SerializeField]
     private GameObject thruster;
     void Start()
     {
