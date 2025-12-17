@@ -2024,7 +2024,7 @@ MonoBehaviour:
   multiplier: 2
   laserprefab: {fileID: 4537573751969893145, guid: 888aedfbb0b25ea4eabcfabf4d3df743,
     type: 3}
-  firerate: 0.3
+  firerate: 0.18
   lives: 3
   spawnManager: {fileID: 0}
   trippleactive: 0
@@ -2327,6 +2327,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1990370768}
     m_Modifications:
+    - target: {fileID: 116137107456792610, guid: ad419cec7e6491747a298245b6201682,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 116137107456792611, guid: ad419cec7e6491747a298245b6201682,
         type: 3}
       propertyPath: m_RootOrder
@@ -2335,12 +2340,12 @@ PrefabInstance:
     - target: {fileID: 116137107456792611, guid: ad419cec7e6491747a298245b6201682,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.54729444
+      value: 0.745319
       objectReference: {fileID: 0}
     - target: {fileID: 116137107456792611, guid: ad419cec7e6491747a298245b6201682,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 116137107456792611, guid: ad419cec7e6491747a298245b6201682,
         type: 3}

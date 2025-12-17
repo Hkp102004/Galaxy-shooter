@@ -33,13 +33,13 @@ public class Spawn_Manager : MonoBehaviour
 
      public IEnumerator SpawnEnemyRoutine()
     {
-        yield return new WaitForSeconds(2f); //will wait for 2s before spawning everything
+        yield return new WaitForSeconds(2f); //will wait for 2s before spawning everything after the asteroid is destroyed
         while (stopSpawning==false) 
         {
             Vector3 position = new Vector3(Random.Range(-9.3f, 9.3f), 7, 0);
             GameObject new_enemy= Instantiate(Enemy, position, Quaternion.identity);
             new_enemy.transform.parent = enemy_container.transform;  //this is like making a parent so now all the enemy will be shown below this and hierarchy will be cleaner
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.2f); //the time difference in while the enemy will spawn
         }
     }
 
